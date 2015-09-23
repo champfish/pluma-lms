@@ -1,29 +1,38 @@
-/**
- * Pluma
- * Main page
- * @authors CJ Duffee, Jeffrey Wang
-*/
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <style>
-        #leftbar
-        {
+        body {
+            background-color: #99FFCC;
+        } 
+        
+        .notifications{
+            width: 49%;
+            height: 100%;
             float: left;
         }
-        #rightbar
-        {
+        .calander{
+            width: 49%;
+            height: 100%;
             float: right;
+
+        }
+        
+        .frame
+        {
+            border-style: none;
+            width: 100%;
+            height: 575px
         }
     </style>
        
     <body>
         <h1>Pluma</h1>  
-        <div id='leftbar'>
-            <iframe src="./notifications.php"></iframe>
+        <div class='notifications'>
+            <iframe class='frame' src="./notifications.php"></iframe>
         </div>
         
-        <div id='rightbar'>
-            <iframe src="./calender.php"></iframe>
+        <div class='calander'>
+            <iframe class='frame' src="./calander.php"></iframe>
         </div>
         <?php 
          
@@ -31,7 +40,6 @@
     </body>
     
 </html>
-
 
 /**
 <?php
