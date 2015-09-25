@@ -4,11 +4,8 @@
  * Main page
  * @authors CJ Duffee, Jeffrey Wang
 */
-?>
-<!DOCTYPE html lang=en.US>
-<?php
 // Import settings
-//require_once ( "settings.php" );
+require_once ( "settings.php" );
 // Get user settings and preferences here
 // Get language
 if ( empty ( $user_settings['language'] ) ) {
@@ -22,6 +19,7 @@ if ( empty ( $user_settings['language'] ) ) {
 //  $page = $_REQUEST['page'];
 //}
 ?>
+<!DOCTYPE html lang="en.US">
 <html>
     <head>
         <style>
@@ -34,20 +32,18 @@ if ( empty ( $user_settings['language'] ) ) {
                 float: right;
             }
         </style>
-        <title><?php //echo $organization_settings['name']; ?> | Pluma</title>
+        <title><?php echo $organization_settings['name']; ?> | <?php echo $translations['pluma']; ?></title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="./javascript.js"></script>
-
     </head>
     <body>
         <div class="container">
-            <p>Pluma</p>
+            <p><?php echo $translations['pluma']; ?></p>
             <br />
-            <?php //echo "<img src=\"" . $organization_settings['image_url'] . "\" alt=\"" . $organization_settings['name'] . " />"; 
-		?>
+            <?php echo "<img src=\"" . $organization_settings['image_url'] . "\" alt=\"" . $organization_settings['name'] . " />"; ?>
             <br />
             <ul class="nav nav-pills">
                 <li role="presentation" class="active"><a href="index.php?page=notifications"><?php echo $translations['notifications']; ?></a></li>
