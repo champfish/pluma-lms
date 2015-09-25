@@ -13,11 +13,11 @@ if ( empty ( $user_settings['language'] ) ) {
 } else {
     require_once ( "includes/languages/language_" . $user_settings['language'] . ".php" ); 
 }
-//if ( empty ( $_REQUEST['page'] ) ) {
-//  $page = 'home';
-//} else {
-//  $page = $_REQUEST['page'];
-//}
+if ( empty ( $_REQUEST['page'] ) ) {
+  $page = 'home';
+} else {
+  $page = $_REQUEST['page'];
+}
 ?>
 <!DOCTYPE html lang="en.US">
 <html>
@@ -54,12 +54,16 @@ if ( empty ( $user_settings['language'] ) ) {
             <!--<iframe src="/includes/pages/<?php //echo $page; ?>.php">
                 Your browser doesn't seem to support iframes. Pluma requires iframes.
             </iframe>-->
+            <?php if ( $page == 'grades' ) { ?>
+            <p>Grades here</p>
+            <?php } else { ?>
             <div id="leftbar">
                 <iframe src="./notifications.php"></iframe>
             </div>
             <div id="rightbar">
                 <iframe src="./calendar.php"></iframe>
             </div>
+            <?php } ?>
         </div> 
     </body>
 </html>
