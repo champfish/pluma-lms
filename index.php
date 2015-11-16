@@ -51,7 +51,7 @@ session_start ();
         </script>
     </head>
     <body>
-		<div id="username" align="right"><?php echo $_SESSION['plumauser']; ?><a src="./logout.php">Logout</a></div>
+		<div id="username" align="right"><?php echo $_SESSION['plumauser']; ?><a href="./logout.php">Logout</a></div>
         <h1><?php echo $translations['pluma']; ?></h1>
         <?php
         if ( !$_SESSION['plumauser'] ) {
